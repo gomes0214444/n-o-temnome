@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin - FLA COMUNICOU</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Painel Admin</h1>
+    <button id="logoutBtn">Sair</button>
+  </header>
+
+  <main>
+    <section>
+      <h2>Nova Notícia</h2>
+      <form id="noticiaForm">
+        <input type="text" id="titulo" placeholder="Título" required />
+        <textarea id="conteudo" placeholder="Conteúdo" required></textarea>
+        <textarea id="descricao" placeholder="Descrição da Notícia" required></textarea> <!-- Novo campo de descrição -->
+        <input type="text" id="creditos" placeholder="Créditos" required /> <!-- Novo campo de créditos -->
+        <input type="file" id="imagem" accept="image/*" required />
+        <button type="submit">Publicar</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Notícias Publicadas</h2>
+      <div id="listaNoticias"></div>
+    </section>
+  </main>
+
+  <script type="module" src="js/admin.js"></script>
+</body>
+</html>
