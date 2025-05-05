@@ -1,35 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <title>Admin - FLA COMUNICOU</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8">
+  <title>FLA COMUNICOU</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
-    <h1>Painel Admin</h1>
-    <button id="logoutBtn">Sair</button>
+    <div class="logo-area">
+      <img src="img/logo.png" alt="Logo Flamengo" class="logo">
+      <h1 class="titulo-site">FLA COMUNICOU</h1>
+    </div>
   </header>
 
   <main>
-    <section>
-      <h2>Nova Notícia</h2>
-      <form id="noticiaForm">
-        <input type="text" id="titulo" placeholder="Título" required />
-        <textarea id="conteudo" placeholder="Conteúdo" required></textarea>
-        <textarea id="descricao" placeholder="Descrição da Notícia" required></textarea> <!-- Novo campo de descrição -->
-        <input type="text" id="creditos" placeholder="Créditos" required /> <!-- Novo campo de créditos -->
-        <input type="file" id="imagem" accept="image/*" required />
-        <button type="submit">Publicar</button>
-      </form>
+    <!-- Destaques -->
+    <section class="destaques">
+      <div class="destaque-item" style="background-image: url('img/gol.jpeg')">
+        <div class="destaque-conteudo">
+          <h2>Vitória épica no Maraca</h2>
+        </div>
+      </div>
+      <div class="destaque-item" style="background-image: url('img/2019.jpg')">
+        <div class="destaque-conteudo">
+          <h2>Craque decide aos 45'</h2>
+        </div>
+      </div>
+      <div class="destaque-item" style="background-image: url('img/jor.avif')">
+        <div class="destaque-conteudo">
+          <h2>Nova contratação anunciada</h2>
+        </div>
+      </div>
+      <div class="destaque-item" style="background-image: url('img/lierta2.jpg')">
+        <div class="destaque-conteudo">
+          <h2>Flamengo na Libertadores</h2>
+        </div>
+      </div>
     </section>
 
-    <section>
-      <h2>Notícias Publicadas</h2>
-      <div id="listaNoticias"></div>
+    <!-- Container para as notícias dinâmicas que serão carregadas -->
+    <section class="destaques-grid" id="noticias-destaque">
+      <!-- Notícias carregadas dinamicamente do Firebase -->
     </section>
+
+    <div id="noticiasContainer" class="noticias-container"></div>
   </main>
 
-  <script type="module" src="js/admin.js"></script>
+  <footer>
+    © 2025 FLA COMUNICOU — Todos os direitos reservados.
+  </footer>
+
+  <script type="module" src="js/index.js"></script>
 </body>
 </html>
